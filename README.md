@@ -1,5 +1,10 @@
 # React Ecosystem
 
+####Best practices and tools for developing modern progressive web apps with react / redux.
+
+Learning course by Shaun Wassel on LinkedIn:
+https://www.linkedin.com/learning/building-modern-projects-with-react
+
 ## Initial installation
 - NodeJS
 - NPM
@@ -26,7 +31,7 @@ export const configureStore = () => createStore(
   persistedReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ &&
   window.__REDUX_DEVTOOLS_EXTENSION__()
-  );
+);
 ```
 
 ## Best practices with Redux
@@ -51,3 +56,35 @@ Install Redux-Thunk and dev packages:
 
     react-ecosystem % npm i redux-thunk redux-devtools-extension @babel/runtime
     npm install --save-dev @babel/plugin-transform-runtime
+
+## Selectors
+
+> Selectors give us a place to put the logic for combining, filtering, transforming stored data.
+
+Selectors used to prevent direct access to the state of the application by components. With selectors components shouldn't know how the state data stored.
+```
+const mapStateToProps = state => ({
+  isLoading: state.isLoading,   // <-- direct access
+  ...
+})
+
+with selectors:
+const mapStateToProps = state => ({
+  isLoading: getTodosLoading(state),   // <-- access via selector
+  ...
+})
+```
+Selectors also help us to hide internal structure of the state, created in the reducers, like:
+```
+todos = [...] // <--- no internal state of loading, data only
+
+will be:
+todos = {
+  isLoading: false, // <--- internal state of loading and data
+  data: [...]
+}
+```
+Install reselect:
+
+    npm i reselect
+With create `createSelector()` you can combine selectors. Every used selector in this combination will be memoized, so it will be calculated only then, when the value changes. 
