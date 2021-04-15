@@ -39,4 +39,15 @@ export default const connected()(TodoList)
 1. Your tests shouldn't care whether your component is connected or not. They should just check to see whether the component renders correct JSX given a specific set of props.
 2. Keep Redux actions and async operations (data fetching) outside of your reducers.
 3. Think carefully about connecting components.
-4. Connecting a component can, in practice, make it less reusable. 
+4. Connecting a component can, in practice, make it less reusable.
+5. Separate views and side effects.
+ 
+### Side effect libs:
+- Redux Thunk (simple)
+- Redux Saga (popular)
+- Redux Logic
+
+Install Redux-Thunk and dev packages:
+
+    react-ecosystem % npm i redux-thunk redux-devtools-extension @babel/runtime
+    npm install --save-dev @babel/plugin-transform-runtime
