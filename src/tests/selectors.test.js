@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { getCompleteTodos } from '../selectors';
+import { getCompleteTodos } from '../todos/selectors';
 
 describe('This test selectors.', () => {
   it('Returns completed todos.', () => {

@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { todos } from '../reducers';
+import { todos } from '../todos/reducers';
 
 describe('This tests todo reducer', () => {
   it ('Test CREATE_TODO action', () => {

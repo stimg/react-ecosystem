@@ -2,7 +2,7 @@ import 'node-fetch';
 import fetchMock from 'fetch-mock';
 import sinon from 'sinon';
 import { expect } from 'chai';
-import { displayAlert, loadTodos } from '../thunks';
+import { displayAlert, loadTodos } from '../todos/thunks';
 
 describe('Test loadTodos() thunk', () => {
   it('This dispatches correct actions on the success scenario', async () => {
