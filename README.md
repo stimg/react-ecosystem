@@ -88,3 +88,28 @@ Install reselect:
 
     npm i reselect
 With create `createSelector()` you can combine selectors. Every used selector in this combination will be memoized, so it will be calculated only then, when the value changes. 
+
+### Separations of conserns
+- **Redusers** -- manage states
+- **Thunks** -- side effects logic 
+- **Selectors** -- abstracting the state format, transforming state data
+
+
+##Styled Components
+
+Syled-Components allow define css styles _inside_ JavaScript files.
+
+Install styled-components package:
+
+    npm i styled-components
+
+## Testing
+
+Install testing packages:
+
+    npm i --save-dev mocha chai @babel/register
+
+To test thunks install following packages:
+
+    npm i --save-dev signon node-fetch fetch-mock
+    
