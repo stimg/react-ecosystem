@@ -1,6 +1,6 @@
 # React Ecosystem
 
-####Best practices and tools for developing modern progressive web apps with react / redux.
+#### Best practices and tools for developing modern progressive web apps with react / redux.
 
 Learning course by Shaun Wassel on LinkedIn:
 https://www.linkedin.com/learning/building-modern-projects-with-react
@@ -95,7 +95,7 @@ With create `createSelector()` you can combine selectors. Every used selector in
 - **Selectors** -- abstracting the state format, transforming state data
 
 
-##Styled Components
+## Styled Components
 
 Syled-Components allow define css styles _inside_ JavaScript files.
 
@@ -103,7 +103,7 @@ Install styled-components package:
 
     npm i styled-components
 
-## Testing
+Testing
 
 Install testing packages:
 
