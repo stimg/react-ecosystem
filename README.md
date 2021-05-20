@@ -54,7 +54,7 @@ export default const connected()(TodoList)
 
 Install Redux-Thunk and dev packages:
 
-    react-ecosystem % npm i redux-thunk redux-devtools-extension @babel/runtime
+    npm install --save-dev redux-thunk redux-devtools-extension @babel/runtime
     npm install --save-dev @babel/plugin-transform-runtime
 
 ## Selectors
